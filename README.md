@@ -28,14 +28,15 @@ Nonetheless, the project is fit to be used standalone.
 All you have to do is plugin the repositories in your classes, and you are good to go.
 Example [Fetch all cuisines offered by Restaurants in Nairobi]
 
-`class CuisinesUseCase(val cuisinesRepository:CuisinesRepository){
+```
+class CuisinesUseCase(val cuisinesRepository:CuisinesRepository){
 
 fun getAllCuisines(cuisineLink:String){
 cuisinesRepository.getRestaurantsServingAParticularCuisinesWhenGivenACuisineLink(cuisineLink).also{
 result->
-// do something useful with the result
+// do something useful with the result }
 }
-}`
+```
 
 **Todo**
 
