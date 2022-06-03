@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="70131b49-5f93-4726-a652-f63e0a18c50b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/constants/Constants.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/AllCuisines.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/Cuisines.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/FeaturedRestaurants.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/FeaturedRestaurantsHomePage.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/HomePageHeaders.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/HomePageParam.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/HomePageRestaurants.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/HomePageRestaurantsImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/PaginatedRestaurants.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/PopularCuisines.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/Restaurant.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/RestaurantAmenities.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/RestaurantAmenitiesImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/RestaurantCollections.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/RestaurantContacts.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/RestaurantContactsImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/RestaurantDetails.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/RestaurantDetailsImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/RestaurantImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/RestaurantMenuItem.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/RestaurantMenuItemsImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/models/scrapingResult/ScraperResult.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/repository/CuisinesRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/repository/CuisinesRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/repository/HomePageRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/repository/HomePageRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/repository/RestaurantsDetailsRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/repository/RestaurantsDetailsRepositoryImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/repository/RestaurantsRepoImpl.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/repository/RestaurantsRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/ScraperRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/ZhiDaoPatterns.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/coroutines/AsyncTasksManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/coroutines/DefaultAsyncTasksHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/CollectionsExtensions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/ExceptionExtension.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/ScraperExtensions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/StringExtensions.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Zhi-Dao-Backend" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Sealed Class" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Enum" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="28cPR1THOAShx974MeoUvMDxZ4r" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ruiriari Gibson/.gradle/wrapper/dists/gradle-7.2-bin/2dnblmf4td7x66yl1d74lt32g/gradle-7.2/bin&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="Zhi-Dao-Backend.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.MainKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="70131b49-5f93-4726-a652-f63e0a18c50b" name="Changes" comment="" />
+      <created>1651512898099</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651512898099</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>dummy://kotlinDecompiled/Main.decompiled.java</url>
+          <line>206</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
+          <properties class="K">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
