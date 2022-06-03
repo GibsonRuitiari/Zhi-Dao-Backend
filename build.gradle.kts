@@ -19,7 +19,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
     testImplementation(kotlin("test"))
     testImplementation("com.google.truth:truth:1.1.3")
-    implementation(kotlin("reflect"))
+
 }
 
 
