@@ -4,17 +4,28 @@ plugins {
     kotlin("jvm") version "1.6.20"
     kotlin("plugin.serialization") version "1.6.20"
     id("com.diffplug.gradle.spotless") version("3.27.0")
+    id("maven-publish")
     application
 }
 
 group = "org.zhi-dao.backend"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
     maven("https://jitpack.io")
 }
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "org.zhi-dao.backend"
+            artifactId = "Zhi-Dao-Backend"
+            version = "1.0"
 
+            from(components["java"])
+        }
+    }
+}
 dependencies {
     implementation("it.skrape:skrapeit:1.2.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1")
@@ -22,7 +33,6 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.8.2"))
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.2")
     testImplementation(kotlin("test"))
-
     testImplementation("com.google.truth:truth:1.1.3")
 }
 
@@ -39,11 +49,6 @@ configure<com.diffplug.gradle.spotless.SpotlessExtension> {
         ktlint("0.43.2")
         endWithNewline()
         trimTrailingWhitespace()
-    }
-    format("misc") {
-        target(fileTree(rootDir) { include("*.gradle.kts", "**/*.gitignore", "README.md") })
-        trimTrailingWhitespace()
-        endWithNewline()
     }
     encoding("UTF-8")
 }
