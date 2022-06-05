@@ -17,7 +17,7 @@ This project utilizes several tech stack for example:
 **Requirements**
 
 1. Jdk 8+
-2. Kotlin version 1.6.20 
+2. Kotlin version 1.6.20
 3. Gradle
 
 

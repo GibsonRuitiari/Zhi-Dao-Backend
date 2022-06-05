@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70131b49-5f93-4726-a652-f63e0a18c50b" name="Changes" comment="added detekt">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/repository/RepositoryImplTests.kt" afterDir="false" />
+    <list default="true" id="70131b49-5f93-4726-a652-f63e0a18c50b" name="Changes" comment="added tests">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/scrapingResult/ScraperResult.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/models/scrapingResult/ScraperResult.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/repository/HomePageRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/repository/HomePageRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/coroutines/DefaultAsyncTasksHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/coroutines/DefaultAsyncTasksHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/ExceptionExtension.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/ExceptionExtension.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/repository/CuisinesRepositoryImplTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/repository/RepositoryImplTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/repository/RepositoryImplTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/utils/extensions/ScraperExtensionsKtTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/functionalTests/ScraperExtensionsKtTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +24,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -69,29 +69,112 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ruiriari Gibson/.gradle/wrapper/dists/gradle-7.2-bin/2dnblmf4td7x66yl1d74lt32g/gradle-7.2/bin&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/Ruiriari Gibson/.gradle/wrapper/dists/gradle-7.2-bin/2dnblmf4td7x66yl1d74lt32g/gradle-7.2/bin",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="functionalTests" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="repository" />
       <recent name="utils.extensions" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle :spotlessCheck" />
+      <command value="gradle spotlessApply" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Kotlin.MainKt">
+    <configuration name="Zhi-Dao-Backend [:spotlessCheck]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":spotlessCheck" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Zhi-Dao-Backend [spotlessApply]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="spotlessApply" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ScraperExtensionsKtTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Zhi-Dao-Backend.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="functionalTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="functionalTests" />
+      <option name="MAIN_CLASS_NAME" value="functionalTests.ScraperExtensionsKtTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScraperExtensionsKtTest.testTheScrapeGeneralRestaurantsDetailsMethodAndEnsureItReturnsExpectedValueDuringExceptionAndWithoutException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Zhi-Dao-Backend.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="functionalTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="functionalTests" />
+      <option name="MAIN_CLASS_NAME" value="functionalTests.ScraperExtensionsKtTest" />
+      <option name="METHOD_NAME" value="testTheScrapeGeneralRestaurantsDetailsMethodAndEnsureItReturnsExpectedValueDuringExceptionAndWithoutException(kotlin.coroutines.Continuation)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <option name="MAIN_CLASS_NAME" value="main.MainKt" />
       <module name="Zhi-Dao-Backend.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -100,6 +183,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.ScraperExtensionsKtTest.testTheScrapeGeneralRestaurantsDetailsMethodAndEnsureItReturnsExpectedValueDuringExceptionAndWithoutException" />
+        <item itemvalue="Gradle.Zhi-Dao-Backend [spotlessApply]" />
+        <item itemvalue="Gradle.Zhi-Dao-Backend [:spotlessCheck]" />
+        <item itemvalue="JUnit.ScraperExtensionsKtTest" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654376986551</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added tests">
+      <created>1654416134698</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1654416134698</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,7 +286,8 @@
     <MESSAGE value="removed unnecesary dependencies" />
     <MESSAGE value="added readme" />
     <MESSAGE value="added detekt" />
-    <option name="LAST_COMMIT_MESSAGE" value="added detekt" />
+    <MESSAGE value="added tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
