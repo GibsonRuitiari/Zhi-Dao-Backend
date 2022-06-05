@@ -19,17 +19,14 @@ class HomePageRepositoryImpl constructor(private val asyncTasksManager: AsyncTas
     private val featuredRestaurantsInHomePageList = mutableListOf<FeaturedRestaurants>()
     private val cuisines = mutableListOf<PopularCuisines>()
 
-    override suspend fun getAllFeaturedRestaurantsInHomePage(): ScraperResult<List<FeaturedRestaurants>> {
-        // val featuredRestaurantsSelector = featuredRestaurantsSectionCssSelector  //"elementor-element-1e226dd"
-        val restaurantsDetailsCollections =
-            scraperRequestInstance.scrapeGeneralRestaurantsDetails(featuredRestaurantsSectionCssSelector)
-        return asyncTasksManager.performTaskAsynchronouslyAndAwaitForResult {
+    override suspend fun getAllFeaturedRestaurantsInHomePage(): ScraperResult<List<FeaturedRestaurants>> = asyncTasksManager.performTaskAsynchronouslyAndAwaitForResult {
+            val restaurantsDetailsCollections = scraperRequestInstance.scrapeGeneralRestaurantsDetails(featuredRestaurantsSectionCssSelector)
             restaurantsDetailsCollections.collectionsContainerIterator().map(featuredRestaurantsInHomePageList) {
                 val (restaurantName, restaurantPriceRating, restaurantDiningType, restaurantThumbnailLink, restaurantLink) = it
                 FeaturedRestaurantsHomePage(restaurantName,restaurantThumbnailLink,restaurantLink,restaurantDiningType,restaurantPriceRating, true)
             }
         }
-    }
+
 
     override suspend fun getAllPopularCuisinesInHomePage(): ScraperResult<List<PopularCuisines>> = asyncTasksManager.performTaskAsynchronouslyAndAwaitForResult {
         scraperRequestInstance.response {

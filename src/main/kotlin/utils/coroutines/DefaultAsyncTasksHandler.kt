@@ -4,7 +4,7 @@ import kotlinx.coroutines.*
 import models.scrapingResult.ScraperResult
 import models.scrapingResult.ScrapingError
 import models.scrapingResult.ScrapingSuccess
-import utils.parseExceptionToReadableFormat
+import utils.extensions.parseExceptionToReadableFormat
 
 open class DefaultAsyncTasksHandler:AsyncTasksManager {
     private val currentDeferredObjects:MutableList<Deferred<*>> = mutableListOf()
@@ -19,9 +19,11 @@ open class DefaultAsyncTasksHandler:AsyncTasksManager {
     override suspend fun <T> performTaskAsynchronouslyAndAwaitForResult(codeToBeExecuted: suspend () -> T): ScraperResult<T> {
         return try {
            val scrapedData= performTaskAsync(codeToBeExecuted).await()
+            println(currentDeferredObjects.size)
             ScrapingSuccess(scrapedData)
         }catch (ex:Exception){
-            if (ex !is CancellationException) ScrapingError(ex.parseExceptionToReadableFormat())
+            println(currentDeferredObjects.size)
+            if (ex !is CancellationException) ScrapingError(ex.parseExceptionToReadableFormat(),ex)
             else throw ex
         }
     }

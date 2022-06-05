@@ -1,7 +1,6 @@
 package utils.extensions
 
 import constants.*
-import it.skrape.core.document
 import it.skrape.core.htmlDocument
 import it.skrape.fetcher.Request
 import it.skrape.fetcher.Scraper
@@ -12,7 +11,6 @@ import it.skrape.selects.eachText
 import it.skrape.selects.html5.*
 import models.Restaurant
 import models.RestaurantImpl
-
 
 
 private val restaurantDiningTypesList = mutableListOf<String>()
@@ -33,7 +31,7 @@ suspend fun Scraper<Request>.scrapeGeneralRestaurantsDetails(sectionCssSelector:
                         val regexResultWrapper= RegexResultWrapper(restaurantsNameRegexResult,restaurantPriceRatingRegexResult, restaurantDiningCategoryRegexResult)
                         regexResultWrapper.checkIfRegexResultIsNullAndAddItToCollection()
                     }
-                    return@findAll Triple(restaurantNamesList,restaurantsPriceRatingList,restaurantDiningTypesList)
+                    return@findAll Triple(restaurantNamesList.toList(),restaurantsPriceRatingList.toList(),restaurantDiningTypesList.toList())
                 }
             }
             val restaurantsLinksList=a{
