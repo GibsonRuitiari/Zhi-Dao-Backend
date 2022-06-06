@@ -25,7 +25,20 @@ This project utilizes several tech stack for example:
 
 Currently, the project is intended to be integrated with the android-app rather than it being a standalone project.
 Nonetheless, the project is fit to be used standalone.
-All you have to do is plugin the repositories in your classes, and you are good to go.
+All you have to do is load the library in your project, and you are good to go.
+For example, in build.gradle.kts
+
+```
+repositories {
+maven{ url = uri("https://jitpack.io")}
+
+}
+
+dependencies {
+implementation("com.github.GibsonRuitiari:Zhi-Dao-Backend:1.0")
+
+}
+```
 Example [Fetch all cuisines offered by Restaurants in Nairobi]
 
 ```
@@ -38,10 +51,7 @@ result->
 }
 ```
 
-**Todo**
 
-1. [ ] Test the repositories
-2. [ ] Test the extension functions
 
 **License**
 

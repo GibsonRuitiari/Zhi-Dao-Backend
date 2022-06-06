@@ -41,7 +41,7 @@ class RepositoryImplTests {
   }
 
   @Test
-  suspend fun `testHomePageRepository's FunctionsAndEnsure They Return A ResultWrapped In ScraperResults`() {
+  suspend fun `testHomePageRepository's Functions And Ensure They Return A Result Wrapper in ScrapperResults`(){
     homePageRepository?.let {
       when (val results = it.getAllFeaturedRestaurantsInHomePage()) {
         is ScrapingSuccess -> {
@@ -52,7 +52,30 @@ class RepositoryImplTests {
           results.exception.assertThatWhenAnExceptionOccursTheExpectedErrorMessageIsReturned(results.errorMessage!!)
         }
       }
+      when(val results= it.getAllPopularCuisinesInHomePage()){
+        is ScrapingSuccess -> {
+          assertThat(results.data).isNotNull()
+        }
+        is ScrapingError -> {
+          assertThat(results.errorMessage).isNotNull()
+          results.exception.assertThatWhenAnExceptionOccursTheExpectedErrorMessageIsReturned(results.errorMessage!!)
+        }
+      }
+      when(val results= it.getAllCafesGreatForInstagramInHomePage()){
+        is ScrapingSuccess -> {
+          assertThat(results.data).isNotNull()
+        }
+        is ScrapingError -> {
+          assertThat(results.errorMessage).isNotNull()
+          results.exception.assertThatWhenAnExceptionOccursTheExpectedErrorMessageIsReturned(results.errorMessage!!)
+        }
+      }
     }
+  }
+
+  @Test
+  suspend fun `test CuisinesRepository And Ensure It Returns A ResultWrapped In ScraperResults`() {
+
     cuisinesRepository?.let {
       when (val results = it.getRestaurantsServingAParticularCuisinesWhenGivenACuisineLink(testCuisinesLink)) {
         is ScrapingSuccess -> {
@@ -66,6 +89,10 @@ class RepositoryImplTests {
         }
       }
     }
+
+  }
+  @Test
+  suspend fun `test RestaurantsRepository And Ensure It's Functions Return A Result Wrapped in Scraper Result`(){
     restaurantsRepository?.let {
       when (val results = it.fetchAListOfRestaurantsWhenGivenACollection(petFriendlyRestaurantCollection)) {
         is ScrapingSuccess -> {
