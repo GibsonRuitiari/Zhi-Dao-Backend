@@ -12,9 +12,9 @@
  */
 package repository
 
-import models.Restaurant
+import models.RestaurantImpl
 import models.scrapingResult.ScraperResult
 
 interface CuisinesRepository {
-  suspend fun getRestaurantsServingAParticularCuisinesWhenGivenACuisineLink(cuisineLink: String): ScraperResult<List<Restaurant>>
+  suspend fun getRestaurantsServingAParticularCuisinesWhenGivenACuisineLink(cuisineLink: String): ScraperResult<List<RestaurantImpl>>
 }

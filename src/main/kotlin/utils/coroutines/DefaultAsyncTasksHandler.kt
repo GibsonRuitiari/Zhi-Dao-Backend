@@ -22,7 +22,7 @@ import models.scrapingResult.ScrapingError
 import models.scrapingResult.ScrapingSuccess
 import utils.extensions.parseExceptionToReadableFormat
 
-open class DefaultAsyncTasksHandler : AsyncTasksManager {
+internal class DefaultAsyncTasksHandler : AsyncTasksManager {
   private val currentDeferredObjects: MutableList<Deferred<*>> = mutableListOf()
 
   override suspend fun <T> performTaskAsync(codeToBeExecuted: suspend () -> T): Deferred<T> = coroutineScope {

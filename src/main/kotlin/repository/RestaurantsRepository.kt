@@ -12,10 +12,10 @@
  */
 package repository
 
-import models.Restaurant
 import models.RestaurantCollections
+import models.RestaurantImpl
 import models.scrapingResult.ScraperResult
 
 interface RestaurantsRepository {
-  suspend fun fetchAListOfRestaurantsWhenGivenACollection(restaurantsCollection: RestaurantCollections): ScraperResult<List<Restaurant>>
+  suspend fun fetchAListOfRestaurantsWhenGivenACollection(restaurantsCollection: RestaurantCollections): ScraperResult<List<RestaurantImpl>>
 }

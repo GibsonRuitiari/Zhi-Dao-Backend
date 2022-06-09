@@ -12,20 +12,20 @@
  */
 package repository
 
-import models.FeaturedRestaurants
-import models.HomePageRestaurants
+import models.FeaturedRestaurantsHomePage
+import models.HomePageRestaurantsImpl
 import models.PopularCuisines
 import models.scrapingResult.ScraperResult
 
 interface HomePageRepository {
-  suspend fun getAllFeaturedRestaurantsInHomePage(): ScraperResult<List<FeaturedRestaurants>>
+  suspend fun getAllFeaturedRestaurantsInHomePage(): ScraperResult<List<FeaturedRestaurantsHomePage>>
   suspend fun getAllPopularCuisinesInHomePage(): ScraperResult<List<PopularCuisines>>
-  suspend fun getAllVeganRestaurantsInHomePage(): ScraperResult<List<HomePageRestaurants>>
-  suspend fun getAllRestaurantsThatAreGreatForOutdoorsInHomePage(): ScraperResult<List<HomePageRestaurants>>
-  suspend fun getAllRestaurantsThatAreGreatForWineLoversInHomePage(): ScraperResult<List<HomePageRestaurants>>
-  suspend fun getAllRestaurantsThatHaveGreatCityViewInHomePage(): ScraperResult<List<HomePageRestaurants>>
-  suspend fun getAllCafesGreatForInstagramInHomePage(): ScraperResult<List<HomePageRestaurants>>
-  suspend fun getAllPetFriendlyCafesInHomePage(): ScraperResult<List<HomePageRestaurants>>
-  suspend fun getAllCosyCafesSuitableToWorkFromInHomePage(): ScraperResult<List<HomePageRestaurants>>
-  suspend fun getAllCafesGreatForAfterWorkDrinksInHomePage(): ScraperResult<List<HomePageRestaurants>>
+  suspend fun getAllVeganRestaurantsInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>>
+  suspend fun getAllRestaurantsThatAreGreatForOutdoorsInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>>
+  suspend fun getAllRestaurantsThatAreGreatForWineLoversInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>>
+  suspend fun getAllRestaurantsThatHaveGreatCityViewInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>>
+  suspend fun getAllCafesGreatForInstagramInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>>
+  suspend fun getAllPetFriendlyCafesInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>>
+  suspend fun getAllCosyCafesSuitableToWorkFromInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>>
+  suspend fun getAllCafesGreatForAfterWorkDrinksInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>>
 }

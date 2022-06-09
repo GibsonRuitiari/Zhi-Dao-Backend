@@ -11,6 +11,18 @@
  * specific language governing permissions and limitations under the License.
  */
 package main
+
+import kotlinx.coroutines.runBlocking
+
+
 fun main() {
-  println("hello")
+    runBlocking {
+        // use the Restaurants entry point
+       val popularCuisines= Restaurants().getAllPopularCuisines()
+    }
+
 }
+
+
+
+

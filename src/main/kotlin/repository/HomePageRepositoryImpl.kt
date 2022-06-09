@@ -56,12 +56,10 @@ import models.AfterWorkDrinksHeader
 import models.BestForVegansHeader
 import models.BestForWineLoversHeader
 import models.CosyCafesToWorkFromHeader
-import models.FeaturedRestaurants
 import models.FeaturedRestaurantsHomePage
 import models.ForTheGramHeaderHeader
 import models.GreatOutdoorsHeader
 import models.HomePageParam
-import models.HomePageRestaurants
 import models.HomePageRestaurantsImpl
 import models.IncredibleCityViewsHeader
 import models.PetFriendlyHeader
@@ -74,13 +72,13 @@ import utils.extensions.collectionsContainerIterator
 import utils.extensions.map
 import utils.extensions.scrapeGeneralRestaurantsDetails
 
-class HomePageRepositoryImpl constructor(private val asyncTasksManager: AsyncTasksManager) : AsyncTasksManager by asyncTasksManager, HomePageRepository {
+internal class HomePageRepositoryImpl constructor(private val asyncTasksManager: AsyncTasksManager) : AsyncTasksManager by asyncTasksManager, HomePageRepository {
   private val scraperRequestInstance by lazy { ScraperRequest() }
 
-  private val featuredRestaurantsInHomePageList = mutableListOf<FeaturedRestaurants>()
+  private val featuredRestaurantsInHomePageList = mutableListOf<FeaturedRestaurantsHomePage>()
   private val cuisines = mutableListOf<PopularCuisines>()
 
-  override suspend fun getAllFeaturedRestaurantsInHomePage(): ScraperResult<List<FeaturedRestaurants>> = asyncTasksManager.performTaskAsynchronouslyAndAwaitForResult {
+  override suspend fun getAllFeaturedRestaurantsInHomePage(): ScraperResult<List<FeaturedRestaurantsHomePage>> = asyncTasksManager.performTaskAsynchronouslyAndAwaitForResult {
     val restaurantsDetailsCollections = scraperRequestInstance.scrapeGeneralRestaurantsDetails(featuredRestaurantsSectionCssSelector)
     restaurantsDetailsCollections.collectionsContainerIterator().map(featuredRestaurantsInHomePageList) {
       val (restaurantName, restaurantPriceRating, restaurantDiningType, restaurantThumbnailLink, restaurantLink) = it
@@ -107,66 +105,66 @@ class HomePageRepositoryImpl constructor(private val asyncTasksManager: AsyncTas
     }.toList()
   }
 
-  override suspend fun getAllVeganRestaurantsInHomePage(): ScraperResult<List<HomePageRestaurants>> {
+  override suspend fun getAllVeganRestaurantsInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>> {
     // val vegansRestaurantsCssSelector ="elementor-element-9da732d"
-    val veganRestaurantsList = mutableListOf<HomePageRestaurants>()
+    val veganRestaurantsList = mutableListOf<HomePageRestaurantsImpl>()
     val veganTitleAndSubtitle = BestForVegansHeader(vegansTitle, vegansSubtitle)
     val homePageParam = HomePageParam(headerTitleAndSubtitle = veganTitleAndSubtitle, sectionCssSelector = vegansHomePageCssSelector, destinationCollection = veganRestaurantsList, collections = RestaurantCollections.Vegans)
     return returnListOfHomePageRestaurantsGivenHomePageParam(homePageParam)
   }
 
-  override suspend fun getAllRestaurantsThatAreGreatForOutdoorsInHomePage(): ScraperResult<List<HomePageRestaurants>> {
+  override suspend fun getAllRestaurantsThatAreGreatForOutdoorsInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>> {
     // val outdoorRestaurantsCssSelector= outdoorSectionCssSelector   //"elementor-element-792909a"
     val outdoorRestaurantsTitleAndSubtitle = GreatOutdoorsHeader(outdoorTitle, outdoorSubtitle)
-    val outdoorRestaurantsList = mutableListOf<HomePageRestaurants>()
+    val outdoorRestaurantsList = mutableListOf<HomePageRestaurantsImpl>()
     val homePageParam = HomePageParam(headerTitleAndSubtitle = outdoorRestaurantsTitleAndSubtitle, sectionCssSelector = outdoorSectionCssSelector, destinationCollection = outdoorRestaurantsList, collections = RestaurantCollections.OutdoorSeating)
     return returnListOfHomePageRestaurantsGivenHomePageParam(homePageParam)
   }
 
-  override suspend fun getAllRestaurantsThatAreGreatForWineLoversInHomePage(): ScraperResult<List<HomePageRestaurants>> {
+  override suspend fun getAllRestaurantsThatAreGreatForWineLoversInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>> {
     // val wineLoversRestaurantsCssSelector ="elementor-element-933d675"
     val wineLoversTitleAndSubtitle = BestForWineLoversHeader(wineTitle, wineSubtitle)
-    val wineLoversRestaurantsList = mutableListOf<HomePageRestaurants>()
+    val wineLoversRestaurantsList = mutableListOf<HomePageRestaurantsImpl>()
     val homePageParam = HomePageParam(headerTitleAndSubtitle = wineLoversTitleAndSubtitle, sectionCssSelector = wineLoversSectionCssSelector, destinationCollection = wineLoversRestaurantsList, collections = RestaurantCollections.WineLovers)
     return returnListOfHomePageRestaurantsGivenHomePageParam(homePageParam)
   }
 
-  override suspend fun getAllRestaurantsThatHaveGreatCityViewInHomePage(): ScraperResult<List<HomePageRestaurants>> {
+  override suspend fun getAllRestaurantsThatHaveGreatCityViewInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>> {
     // val restaurantsCssSelector ="elementor-element-8b80d60"
     val titleAndSubtitle = IncredibleCityViewsHeader(cityViewTitle, cityViewSubtitle)
-    val restaurantsList = mutableListOf<HomePageRestaurants>()
+    val restaurantsList = mutableListOf<HomePageRestaurantsImpl>()
     val homePageParam = HomePageParam(headerTitleAndSubtitle = titleAndSubtitle, sectionCssSelector = greatViewCitySectionCssSelector, destinationCollection = restaurantsList, collections = RestaurantCollections.NairobiView)
     return returnListOfHomePageRestaurantsGivenHomePageParam(homePageParam)
   }
 
-  override suspend fun getAllCafesGreatForInstagramInHomePage(): ScraperResult<List<HomePageRestaurants>> {
+  override suspend fun getAllCafesGreatForInstagramInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>> {
     //  val restaurantsCssSelector ="elementor-element-42e8064"
     val titleAndSubtitle = ForTheGramHeaderHeader(gramTitle, gramSubtitle)
-    val restaurantsList = mutableListOf<HomePageRestaurants>()
+    val restaurantsList = mutableListOf<HomePageRestaurantsImpl>()
     val homePageParam = HomePageParam(headerTitleAndSubtitle = titleAndSubtitle, sectionCssSelector = greatForGramSectionCssSelector, destinationCollection = restaurantsList, collections = RestaurantCollections.GramWorthy)
     return returnListOfHomePageRestaurantsGivenHomePageParam(homePageParam)
   }
 
-  override suspend fun getAllPetFriendlyCafesInHomePage(): ScraperResult<List<HomePageRestaurants>> {
+  override suspend fun getAllPetFriendlyCafesInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>> {
     //  val restaurantsCssSelector ="elementor-element-ca71f75"
     val titleAndSubtitle = PetFriendlyHeader(petFriendlyTitle, petFriendlySubtitle)
-    val restaurantsList = mutableListOf<HomePageRestaurants>()
+    val restaurantsList = mutableListOf<HomePageRestaurantsImpl>()
     val homePageParam = HomePageParam(headerTitleAndSubtitle = titleAndSubtitle, sectionCssSelector = petFriendlySectionCssSelector, destinationCollection = restaurantsList, collections = RestaurantCollections.PetFriendly)
     return returnListOfHomePageRestaurantsGivenHomePageParam(homePageParam)
   }
 
-  override suspend fun getAllCosyCafesSuitableToWorkFromInHomePage(): ScraperResult<List<HomePageRestaurants>> {
+  override suspend fun getAllCosyCafesSuitableToWorkFromInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>> {
     //   val restaurantsCssSelector ="elementor-element-7227130"
     val titleAndSubtitle = CosyCafesToWorkFromHeader(cosyCafeTitle, cosyCafeSubtitle)
-    val restaurantsList = mutableListOf<HomePageRestaurants>()
+    val restaurantsList = mutableListOf<HomePageRestaurantsImpl>()
     val homePageParam = HomePageParam(headerTitleAndSubtitle = titleAndSubtitle, sectionCssSelector = cosyCafesSectionCssSelector, destinationCollection = restaurantsList, collections = null)
     return returnListOfHomePageRestaurantsGivenHomePageParam(homePageParam)
   }
 
-  override suspend fun getAllCafesGreatForAfterWorkDrinksInHomePage(): ScraperResult<List<HomePageRestaurants>> {
+  override suspend fun getAllCafesGreatForAfterWorkDrinksInHomePage(): ScraperResult<List<HomePageRestaurantsImpl>> {
     // val restaurantsCssSelector ="elementor-element-eba6db8"
     val titleAndSubtitle = AfterWorkDrinksHeader(afterWorkTitle, afterWorkSubtitle)
-    val restaurantsList = mutableListOf<HomePageRestaurants>()
+    val restaurantsList = mutableListOf<HomePageRestaurantsImpl>()
     val homePageParam = HomePageParam(headerTitleAndSubtitle = titleAndSubtitle, sectionCssSelector = afterWorkSectionCssSelector, destinationCollection = restaurantsList, collections = RestaurantCollections.Cocktails)
     return returnListOfHomePageRestaurantsGivenHomePageParam(homePageParam)
   }
@@ -181,7 +179,7 @@ class HomePageRepositoryImpl constructor(private val asyncTasksManager: AsyncTas
     withClass = cuisinesTitleCssSelector // "title"
     findAll { return@findAll eachText }
   }
-  private suspend fun returnListOfHomePageRestaurantsGivenHomePageParam(param0: HomePageParam) = asyncTasksManager.performTaskAsynchronouslyAndAwaitForResult {
+  private suspend fun returnListOfHomePageRestaurantsGivenHomePageParam(param0: HomePageParam): ScraperResult<List<HomePageRestaurantsImpl>> = asyncTasksManager.performTaskAsynchronouslyAndAwaitForResult {
     val (headerTitleAndSubtitle, cssSelector, collection, destination) = param0
     val restaurantsDetailsCollections = scraperRequestInstance.scrapeGeneralRestaurantsDetails(cssSelector)
     restaurantsDetailsCollections.collectionsContainerIterator().map(destination = destination) {

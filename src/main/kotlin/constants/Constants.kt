@@ -12,7 +12,7 @@
  */
 package constants
 
-const val baseUrl = "https://eatout.co.ke/"
+internal const val baseUrl = "https://eatout.co.ke/"
 
 // css selectors
 // home page restaurants css selectors

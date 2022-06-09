@@ -33,6 +33,8 @@ enum class AllCuisines(override val cuisineName: String, override val cuisineLin
   PanAsianCuisine("Pan Asian", "https://eatout.co.ke/cuisine/pan-asian/?city=nairobi"),
   JapaneseCuisine("Japanese", "https://eatout.co.ke/cuisine/japanese/?city=nairobi"),
   BurgerCuisine("Burger", "https://eatout.co.ke/cuisine/burger/?city=nairobi");
+  operator fun component1() = cuisineName
+  operator fun component2() = cuisineLink
   companion object {
     fun listOfAllCuisines() = AllCuisines.values()
   }

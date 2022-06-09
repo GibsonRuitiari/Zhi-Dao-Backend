@@ -13,7 +13,7 @@
 package utils.extensions
 
 // can hold any type of iterables --> lists/sets
-data class CollectionsContainer<out A, out B, out C, out D, out E>(
+internal data class CollectionsContainer<out A, out B, out C, out D, out E>(
   val firstCollection: A,
   val secondCollection: B,
   val thirdCollection: C,
@@ -21,14 +21,14 @@ data class CollectionsContainer<out A, out B, out C, out D, out E>(
   val fifthCollection: E
 )
 
-inline fun <T> Iterator<T>.forEach(performActionOnObject: (T) -> Unit) {
+internal inline fun <T> Iterator<T>.forEach(performActionOnObject: (T) -> Unit) {
   while (hasNext()) {
     val obj = next()
     performActionOnObject(obj)
   }
 }
 
-inline fun <T, R, C : MutableCollection<in R>> Iterator<T>.map(destination: C, performActionOnObjectAndReturnAnother: (T) -> R): C {
+internal inline fun <T, R, C : MutableCollection<in R>> Iterator<T>.map(destination: C, performActionOnObjectAndReturnAnother: (T) -> R): C {
   while (hasNext()) {
     val nextObj = next()
     destination.add(performActionOnObjectAndReturnAnother(nextObj))
@@ -36,7 +36,7 @@ inline fun <T, R, C : MutableCollection<in R>> Iterator<T>.map(destination: C, p
   return destination
 }
 
-fun <A> Triple<Iterable<A>, Iterable<A>, Iterable<A>>.collectionsContainerIterator(): Iterator<Triple<A, A, A>> {
+internal fun <A> Triple<Iterable<A>, Iterable<A>, Iterable<A>>.collectionsContainerIterator(): Iterator<Triple<A, A, A>> {
   val param0 = first.iterator()
   val param1 = second.iterator()
   val param2 = third.iterator()
@@ -51,7 +51,7 @@ fun <A> Triple<Iterable<A>, Iterable<A>, Iterable<A>>.collectionsContainerIterat
   }
 }
 
-fun <A> CollectionsContainer<Iterable<A>, Iterable<A>, Iterable<A>, Iterable<A>, Iterable<A>>.collectionsContainerIterator(): Iterator<CollectionsContainer<A, A, A, A, A>> {
+internal fun <A> CollectionsContainer<Iterable<A>, Iterable<A>, Iterable<A>, Iterable<A>, Iterable<A>>.collectionsContainerIterator(): Iterator<CollectionsContainer<A, A, A, A, A>> {
   val param0 = firstCollection.iterator()
   val param1 = secondCollection.iterator()
   val param2 = thirdCollection.iterator()

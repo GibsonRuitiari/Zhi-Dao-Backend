@@ -29,14 +29,13 @@ import it.skrape.selects.html5.div
 import it.skrape.selects.html5.h3
 import it.skrape.selects.html5.img
 import it.skrape.selects.html5.section
-import models.Restaurant
 import models.RestaurantImpl
 
 private val restaurantDiningTypesList = mutableListOf<String>()
 private val restaurantNamesList = mutableListOf<String>()
 private val restaurantsPriceRatingList = mutableListOf<String>()
 
-suspend fun Scraper<Request>.scrapeGeneralRestaurantsDetails(sectionCssSelector: String) = response {
+internal suspend fun Scraper<Request>.scrapeGeneralRestaurantsDetails(sectionCssSelector: String) = response {
   htmlDocument {
     section {
       withClass = sectionCssSelector
@@ -69,7 +68,7 @@ private fun RegexResultWrapper.checkIfRegexResultIsNullAndAddItToCollection() {
   priceRatingResult?.let { pr -> restaurantsPriceRatingList.add(pr) }
   diningCategoryResult?.let { cr -> restaurantDiningTypesList.add(cr) }
 }
-suspend fun Scraper<Request>.getAListOfRestaurantsWhenGivenADivSelector(divSelector: String, destination: MutableList<Restaurant>) = response {
+internal suspend fun Scraper<Request>.getAListOfRestaurantsWhenGivenADivSelector(divSelector: String, destination: MutableList<RestaurantImpl>) = response {
   htmlDocument {
     div {
       withClass = divSelector

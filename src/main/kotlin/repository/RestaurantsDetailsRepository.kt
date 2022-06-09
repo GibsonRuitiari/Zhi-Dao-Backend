@@ -11,9 +11,9 @@
  * specific language governing permissions and limitations under the License.
  */
 package repository
-
-import models.RestaurantDetails
+import models.RestaurantDetailsImpl
+import models.scrapingResult.ScraperResult
 
 interface RestaurantsDetailsRepository {
-  suspend fun getAllRestaurantDetails(restaurantLink: String): RestaurantDetails
+  suspend fun getAllRestaurantDetails(restaurantLink: String): ScraperResult<RestaurantDetailsImpl>
 }

@@ -35,7 +35,7 @@ maven{ url = uri("https://jitpack.io")}
 }
 
 dependencies {
-implementation("com.github.GibsonRuitiari:Zhi-Dao-Backend:1.0")
+implementation("com.github.GibsonRuitiari:Zhi-Dao-Backend:1.0.1")
 
 }
 ```

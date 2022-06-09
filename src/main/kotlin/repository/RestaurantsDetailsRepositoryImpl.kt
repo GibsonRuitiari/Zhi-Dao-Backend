@@ -45,16 +45,16 @@ import it.skrape.selects.html5.ul
 import models.Restaurant
 import models.RestaurantAmenitiesImpl
 import models.RestaurantContactsImpl
-import models.RestaurantDetails
 import models.RestaurantDetailsImpl
 import models.RestaurantImpl
 import models.RestaurantMenuItemsImpl
 import utils.ScraperRequest
+import utils.coroutines.AsyncTasksManager
 import utils.extensions.CollectionsContainer
 import utils.extensions.collectionsContainerIterator
 import utils.extensions.map
 
-class RestaurantsDetailsRepositoryImpl : RestaurantsDetailsRepository {
+internal class RestaurantsDetailsRepositoryImpl constructor(private val asyncTasksManager: AsyncTasksManager): AsyncTasksManager by asyncTasksManager, RestaurantsDetailsRepository {
   private val similarRestaurantsList = mutableListOf<Restaurant>()
   private fun generateRestaurantSlideShowPicturesFromDocElement(docElement: Doc) = docElement.div {
     withClass = restaurantsSlideShowPicturesCssSelector // "margin-0"
@@ -185,9 +185,9 @@ class RestaurantsDetailsRepositoryImpl : RestaurantsDetailsRepository {
     )
   }
 
-  override suspend fun getAllRestaurantDetails(restaurantLink: String): RestaurantDetails {
+  override suspend fun getAllRestaurantDetails(restaurantLink: String) = performTaskAsynchronouslyAndAwaitForResult {
     val scraperRequestInstance by lazy { ScraperRequest(urlToBeUsed = restaurantLink) }
-    return scraperRequestInstance.response {
+      scraperRequestInstance.response {
       htmlDocument {
         val restaurantsSlideShowPictureArray = generateRestaurantSlideShowPicturesFromDocElement(this)
         val basicAmenitiesArray = generateRestaurantBasicAmenitiesFromDocElement(this)
