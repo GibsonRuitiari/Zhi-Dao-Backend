@@ -42,12 +42,12 @@ implementation("com.github.GibsonRuitiari:Zhi-Dao-Backend:1.0.1")
 Example [Fetch all cuisines offered by Restaurants in Nairobi]
 
 ```
-class CuisinesUseCase(val cuisinesRepository:CuisinesRepository){
+fun main() {
+    runBlocking {
+        // use the Restaurants() as the entry point
+       val popularCuisines= Restaurants().getAllPopularCuisines()
+    }
 
-fun getAllCuisines(cuisineLink:String){
-cuisinesRepository.getRestaurantsServingAParticularCuisinesWhenGivenACuisineLink(cuisineLink).also{
-result->
-// do something useful with the result }
 }
 ```
 

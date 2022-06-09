@@ -4,33 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70131b49-5f93-4726-a652-f63e0a18c50b" name="Changes" comment="refactored code">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Restaurants.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/entrypoint/RestaurantsManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/constants/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/constants/Constants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/AllCuisines.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/models/AllCuisines.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/HomePageParam.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/models/HomePageParam.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/scrapingResult/ScraperResult.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/models/scrapingResult/ScraperResult.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/repository/CuisinesRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/repository/CuisinesRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/repository/CuisinesRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/repository/CuisinesRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/repository/HomePageRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/repository/HomePageRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/repository/HomePageRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/repository/HomePageRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/repository/RestaurantsDetailsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/repository/RestaurantsDetailsRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/repository/RestaurantsDetailsRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/repository/RestaurantsDetailsRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/repository/RestaurantsRepoImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/repository/RestaurantsRepoImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/repository/RestaurantsRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/repository/RestaurantsRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/ScraperRequest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/ScraperRequest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/ZhiDaoPatterns.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/ZhiDaoPatterns.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/coroutines/DefaultAsyncTasksHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/coroutines/DefaultAsyncTasksHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/CollectionsExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/CollectionsExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/ExceptionExtension.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/ExceptionExtension.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/ScraperExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/ScraperExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/StringExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/extensions/StringExtensions.kt" afterDir="false" />
-    </list>
+    <list default="true" id="70131b49-5f93-4726-a652-f63e0a18c50b" name="Changes" comment="refactored code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -354,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654493016256</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactored code">
+      <created>1654773209247</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654773209248</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
