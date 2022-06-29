@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "org.zhi-dao.backend"
-version = "1.0"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -20,7 +20,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "org.zhi-dao.backend"
             artifactId = "Zhi-Dao-Backend"
-            version = "1.0"
+            version = "1.0.2"
 
             from(components["java"])
         }

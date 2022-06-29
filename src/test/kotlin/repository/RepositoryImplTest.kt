@@ -41,7 +41,7 @@ class RepositoryImplTests {
   }
 
   @Test
-  suspend fun `testHomePageRepository's Functions And Ensure They Return A Result Wrapper in ScrapperResults`(){
+  suspend fun `testHomePageRepository's Functions And Ensure They Return A Result Wrapper in ScrapperResults`() {
     homePageRepository?.let {
       when (val results = it.getAllFeaturedRestaurantsInHomePage()) {
         is ScrapingSuccess -> {
@@ -52,7 +52,7 @@ class RepositoryImplTests {
           results.exception.assertThatWhenAnExceptionOccursTheExpectedErrorMessageIsReturned(results.errorMessage!!)
         }
       }
-      when(val results= it.getAllPopularCuisinesInHomePage()){
+      when (val results = it.getAllPopularCuisinesInHomePage()) {
         is ScrapingSuccess -> {
           assertThat(results.data).isNotNull()
         }
@@ -61,7 +61,7 @@ class RepositoryImplTests {
           results.exception.assertThatWhenAnExceptionOccursTheExpectedErrorMessageIsReturned(results.errorMessage!!)
         }
       }
-      when(val results= it.getAllCafesGreatForInstagramInHomePage()){
+      when (val results = it.getAllCafesGreatForInstagramInHomePage()) {
         is ScrapingSuccess -> {
           assertThat(results.data).isNotNull()
         }
@@ -89,10 +89,9 @@ class RepositoryImplTests {
         }
       }
     }
-
   }
   @Test
-  suspend fun `test RestaurantsRepository And Ensure It's Functions Return A Result Wrapped in Scraper Result`(){
+  suspend fun `test RestaurantsRepository And Ensure It's Functions Return A Result Wrapped in Scraper Result`() {
     restaurantsRepository?.let {
       when (val results = it.fetchAListOfRestaurantsWhenGivenACollection(petFriendlyRestaurantCollection)) {
         is ScrapingSuccess -> {

@@ -54,7 +54,7 @@ import utils.extensions.CollectionsContainer
 import utils.extensions.collectionsContainerIterator
 import utils.extensions.map
 
-internal class RestaurantsDetailsRepositoryImpl constructor(private val asyncTasksManager: AsyncTasksManager): AsyncTasksManager by asyncTasksManager, RestaurantsDetailsRepository {
+internal class RestaurantsDetailsRepositoryImpl constructor(private val asyncTasksManager: AsyncTasksManager) : AsyncTasksManager by asyncTasksManager, RestaurantsDetailsRepository {
   private val similarRestaurantsList = mutableListOf<Restaurant>()
   private fun generateRestaurantSlideShowPicturesFromDocElement(docElement: Doc) = docElement.div {
     withClass = restaurantsSlideShowPicturesCssSelector // "margin-0"
@@ -187,7 +187,7 @@ internal class RestaurantsDetailsRepositoryImpl constructor(private val asyncTas
 
   override suspend fun getAllRestaurantDetails(restaurantLink: String) = performTaskAsynchronouslyAndAwaitForResult {
     val scraperRequestInstance by lazy { ScraperRequest(urlToBeUsed = restaurantLink) }
-      scraperRequestInstance.response {
+    scraperRequestInstance.response {
       htmlDocument {
         val restaurantsSlideShowPictureArray = generateRestaurantSlideShowPicturesFromDocElement(this)
         val basicAmenitiesArray = generateRestaurantBasicAmenitiesFromDocElement(this)

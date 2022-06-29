@@ -14,15 +14,10 @@ package main
 
 import kotlinx.coroutines.runBlocking
 
-
 fun main() {
-    runBlocking {
-        // use the Restaurants entry point
-       val popularCuisines= Restaurants().getAllPopularCuisines()
-    }
-
+  runBlocking {
+    // use the Restaurants entry point
+    val popularCuisines = Restaurants().getAllPopularCuisines()
+    println(popularCuisines)
+  }
 }
-
-
-
-
